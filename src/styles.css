@@ -1,0 +1,165 @@
+/* styles.css */
+body {
+  margin: 0;
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.valentine-container {
+  text-align: center;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  transition: all 0.3s ease;
+}
+
+.bears-combined {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.response-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tenor-gif-embed {
+  flex: 1;
+  max-width: 300px;
+  min-width: 250px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.tenor-gif-embed:hover {
+  transform: scale(1.05);
+}
+
+.text {
+  font-size: 2rem;
+  color: #000000;
+  margin: 15px 0;
+}
+
+.response-container .text {
+  font-size: 2.5rem;
+  color: #ff4081;
+  margin-top: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+}
+
+.yes-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.no-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.no-button:hover {
+  background-color: #d32f2f;
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-pop {
+  animation: pop 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@media (max-width: 480px) {
+  .valentine-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .bears-combined {
+    gap: 1rem;
+  }
+
+  .text {
+    font-size: 1.5rem;
+  }
+
+  .response-container .text {
+    font-size: 2rem;
+  }
+
+  .tenor-gif-embed {
+    max-width: 250px;
+    min-width: 200px;
+  }
+
+  .buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
